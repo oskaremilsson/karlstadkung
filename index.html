@@ -30,9 +30,9 @@
 <script>
 	document.querySelector("body").addEventListener("touchstart", function() {
 		document.querySelector('audio').load();
-			document.querySelector('audio').play();
 			if (document.querySelector('#play')) {
-					document.querySelector("#logo").removeChild(document.querySelector('#play'));
+				document.querySelector('audio').play();
+				document.querySelector("#logo").removeChild(document.querySelector('#play'));
 			}
 	});
 
@@ -48,7 +48,8 @@
 			'"Slips och höga klackar"',
 			'"Ingen kan slå oss på caps eller fest"',
 			'"Ekonomer, med mikrofoner"',
-			'"Sjunger med ljus stämma"'
+			'"Sjunger med ljus stämma"',
+			'"Vi är jävligt smarta"'
 	];
 
 	var use = Math.floor((Math.random() * 5));
