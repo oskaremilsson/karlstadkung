@@ -1,0 +1,65 @@
+@import url(https://fonts.googleapis.com/css?family=Pacifico);
+@import url(https://fonts.googleapis.com/css?family=Gochi+Hand);
+
+body {
+	background: #792a86;
+	margin: 0;
+	padding: 0;
+	font-size: 16px;
+}
+
+h1,h2,h3,h4,h5,h6,p {
+	line-height: 1.45;
+}
+
+h1 {
+	font-size: 2em;
+	/*font-family: 'Pacifico', cursive;*/
+	font-family: 'Gochi Hand', cursive;
+	color: #b3ff11;
+	text-shadow: 4px 2px 22px rgba(0, 0, 0, 1);
+	text-align: center;
+}
+h2 { font-size: 1em; }
+
+.citat {
+	padding-top: 5%;
+}
+
+#logo {
+	width: 100%;
+	height: 100%;
+	display: block;
+	margin: 0 auto;
+	background: url(kalmaress.gif);
+}
+
+p {
+	width: 100%;
+	font-size: 100%;
+	line-height: 1.6875;
+	text-align: justify;
+}
+
+#play {
+        display: none;
+}
+
+@media only screen and (max-device-width: 768px) {
+	#play {
+		font-family: Arial sans-serif;
+		text-align: center;
+		background: rgba(255,255,255,0.8);
+		display: block;
+	}
+
+	#play h1 {
+		color: #000;
+		text-shadow: 4px 2px 22px rgba(211, 111, 228, 1);
+	}
+}
+
+.hide {
+        display: none;
+}
+

@@ -1,0 +1,70 @@
+<html lang="sv">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<title>Kalmar ESS</title>
+<meta name="description" content="Kalmar Ess - ekonomer har telefoner" />
+<link rel="icon" href="favicon.ico" type="image/x-icon"/>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
+<meta property="og:title" content="Kalmar ESS" />
+<meta property="og:type" content="website" />
+<meta property="og:description" content="Kom sjung tjalala kalmar ess" />
+<meta property="og:url" content="http://kalmaress.nu" />
+<meta property="og:image" content="http://kalmaress.nu/upplevelsen.jpg" />
+
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+<div id="logo">
+	<div id="play" class="hide">
+		<h1>Klicka för Upplevelsen™®©</h1>
+	</div>
+
+	<h1 class="citat">"Ingen kan slå oss på caps eller fest"</h1>
+</div>
+<audio autoplay loop src="kalmaress.mp3" type="audio/mpeg"></audio>
+
+<div class="hide"><a href="//kalmaress.se">kalmar ess kalmaress.se kalmaress</a></div>
+
+<script>
+	document.querySelector("body").addEventListener("touchstart", function() {
+		document.querySelector('audio').load();
+			document.querySelector('audio').play();
+			if (document.querySelector('#play')) {
+					document.querySelector("#logo").removeChild(document.querySelector('#play'));
+			}
+	});
+
+	document.querySelector("body").addEventListener("click", function() {
+		document.querySelector('audio').play();
+		if (document.querySelector('#play')) {
+			document.querySelector("#logo").removeChild(document.querySelector('#play'));
+		}
+	});
+
+	var citat = [
+			'"Ekonomer, har telefoner"',
+			'"Slips och höga klackar"',
+			'"Ingen kan slå oss på caps eller fest"',
+			'"Ekonomer, med mikrofoner"',
+			'"Sjunger med ljus stämma"'
+	];
+
+	var use = Math.floor((Math.random() * 5));
+	document.querySelector(".citat").textContent = citat[use];
+
+</script>
+
+<script src="//code.jquery.com/jquery-latest.min.js"></script>
+<script src="FlowType.js"></script>
+<script>
+$('h1').flowtype({
+	minimum   : 15,
+	maximum   : 9999,
+	minFont   : 5,
+	maxFont   : 9999,
+	fontRatio : 15
+});</script>
+</body>
+</html>
