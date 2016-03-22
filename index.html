@@ -28,36 +28,43 @@
 <div class="hide"><a href="//kalmaress.se">kalmar ess kalmaress.se kalmaress</a></div>
 
 <script>
-	document.querySelector("body").addEventListener("touchstart", function() {
-		document.querySelector('audio').load();
-			if (document.querySelector('#play')) {
-				document.querySelector('audio').play();
-				document.querySelector("#logo").removeChild(document.querySelector('#play'));
-			}
-	});
+var citat = [
+		'"Ekonomer, har telefoner"',
+		'"Slips och höga klackar"',
+		'"Ingen kan slå oss på caps eller fest"',
+		'"Ekonomer, med mikrofoner"',
+		'"Sjunger med ljus stämma"',
+		'"Vi är jävligt smarta"'
+];
 
-	document.querySelector("body").addEventListener("click", function() {
-		document.querySelector('audio').play();
+var use = Math.floor((Math.random() * citat.length));
+document.querySelector(".citat").textContent = citat[use];
+
+document.querySelector("body").addEventListener("touchstart", function() {
+	document.querySelector('audio').load();
 		if (document.querySelector('#play')) {
+			document.querySelector('audio').play();
 			document.querySelector("#logo").removeChild(document.querySelector('#play'));
 		}
-	});
+		else {
+			var use = Math.floor((Math.random() * citat.length));
+			document.querySelector(".citat").textContent = citat[use];
+		}
+});
 
-	var citat = [
-			'"Ekonomer, har telefoner"',
-			'"Slips och höga klackar"',
-			'"Ingen kan slå oss på caps eller fest"',
-			'"Ekonomer, med mikrofoner"',
-			'"Sjunger med ljus stämma"',
-			'"Vi är jävligt smarta"'
-	];
-
-	var use = Math.floor((Math.random() * citat.length));
-	document.querySelector(".citat").textContent = citat[use];
-
+document.querySelector("body").addEventListener("click", function() {
+	document.querySelector('audio').play();
+	if (document.querySelector('#play')) {
+		document.querySelector("#logo").removeChild(document.querySelector('#play'));
+	}
+	else {
+		var use = Math.floor((Math.random() * citat.length));
+		document.querySelector(".citat").textContent = citat[use];
+	}
+});
 </script>
 
-<script src="//code.jquery.com/jquery-latest.min.js"></script>
+<script src="http://code.jquery.com/jquery-latest.min.js"></script>
 <script src="FlowType.js"></script>
 <script>
 $('h1').flowtype({
