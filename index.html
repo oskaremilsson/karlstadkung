@@ -53,8 +53,8 @@ document.querySelector("body").addEventListener("touchstart", function() {
 });
 
 document.querySelector("body").addEventListener("click", function() {
-	document.querySelector('audio').play();
 	if (document.querySelector('#play')) {
+		document.querySelector('audio').play();
 		document.querySelector("#logo").removeChild(document.querySelector('#play'));
 	}
 	else {
